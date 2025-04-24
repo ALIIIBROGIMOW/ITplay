@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITPlay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+        <div class="logo icon-vessel">
+            <a href="about.html">
+                <img class="click-icons" src="images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div>               
+            <p>ITPlay</p>
+        </div>
+        </div>
+        <div class="nav-vessel">
+            <nav>
+                <ul>
+                    <li><a href="main.html">Новое</a></li>
+                    <li><a href="popular.html">Популярное</a></li>
+                    <li><a href="best.html">Лучшее</a></li>
+                    <li><a href="servises.html">Услуги</a></li>
+                    <li><a href="about.html" class="active">О компании</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="theme-toggle icon-vessel">
+            <img id="theme-icon" class=" click-icons" src="images/sun.svg" alt="Toggle Theme" onclick="toggleTheme()" />
+        </div>
+    </header>
+    <main>
+        <div id="blank">
+            <h1>Вы не должны это видеть. Пожалуйста почини хедер :]</h1>
+        </div>
+        <section class="content">
+        
+            <article class="newspage">
+                <img src="images/placeholder.png" alt="Placeholder Image">
+                <h1>Lorem ipsum dolor sit amet</h1>   
+                <p>Consectetur adipiscing elit. Proin lacinia dui at nisi tincidunt, vel tincidunt enim gravida. 
+                    Consectetur adipiscing elit. Proin lacinia dui at nisi tincidunt, vel tincidunt enim gravida.
+                    Consectetur adipiscing elit. Proin lacinia dui at nisi tincidunt, vel tincidunt enim gravida.
+                    Consectetur adipiscing elit. Proin lacinia dui at nisi tincidunt, vel tincidunt enim gravida.
+                    Consectetur adipiscing elit. Proin lacinia dui at nisi tincidunt, vel tincidunt enim gravida.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MySite. All Rights Reserved.</p>
+        <p>Откза от ответсвенности: Сайт создан в демонстративных целях. Все совпадения случайны</p>
+        <div class="icon-vessel"></div>
+        <a href="#" class="icon-link">
+            <img class="click-icons" src="images/faceb.png" alt="Clickable Icon">
+        </a>
+        <a href="#" class="icon-link">
+            <img  class="click-icons" src="images/vk.png" alt="Clickable Icon">
+        </a><a href="#" class="icon-link">
+            <img class="click-icons" src="images/twit.png" alt="Clickable Icon">
+        </a>
+    </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const root = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            const currentTheme = root.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+            root.setAttribute('data-theme', newTheme);
+            icon.src = newTheme === 'dark' ? 'images/moon.svg' : 'images/sun.svg';
+            icon.alt = newTheme === 'dark' ? 'Тёмная тема' : 'Светлая тема';
+            }
+    </script>
+</body>
+</html>
